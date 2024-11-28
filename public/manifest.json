@@ -1,0 +1,16 @@
+{
+  "short_name": "Maja Agency",
+  "name": "Maja Agency App",
+  "icons": [
+
+    {
+      "src": "maja-agency-logo.png",
+      "type": "image/png",
+      "sizes": "65x65"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#198754",
+  "background_color": "#f1f1f1"
+}
