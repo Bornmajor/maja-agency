@@ -1,3 +1,8 @@
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/32d8fb20-25e7-4007-8a2f-d5327617bd75" alt="Image description" width="150">
+</div>
+
+
 # Maja Agency
 
 Maja Agency is a landing page for a tech company that offers a wide range of services, including:
