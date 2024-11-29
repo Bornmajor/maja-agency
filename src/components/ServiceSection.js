@@ -6,9 +6,9 @@ const ServiceSection = () => {
   return (
     <>
     
-    <div className='services'>
+    <div className='services' id="services">
            
-           <div className='d-flex justify-content-between align-items-center'>
+           <div className='d-flex justify-content-between align-items-center classic-container'>
              
              <h2 className='classic-header' >
                What we serve <span className='primary-text'> For Your Business</span>

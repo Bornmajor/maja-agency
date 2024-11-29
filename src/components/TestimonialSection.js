@@ -20,7 +20,7 @@ const TestimonialSection = () => {
         <div>
 
 
-          <Link to="#"
+          <Link to="/#contact-us"
          className='btn btn-success alternative-header'>
           Contact Us Now
          </Link>

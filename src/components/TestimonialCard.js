@@ -6,9 +6,9 @@ const TestimonialCard = ({username,testimony,organization,profileUrl}) => {
     <div className='testimonial-card'>
 
       
-            <div className='user-details w-100 d-flex align-items-center justify-content-between mb-3' >
+            <div className='user-details w-100 d-flex align-items-center justify-content-between mb-3'  style={{paddingLeft:'20px'}} >
 
-                <img src={profileUrl}  />
+                <img src={profileUrl} alt="User profile" />
 
                 <div className='profile-details mx-2'>
                     <p>{username}</p>

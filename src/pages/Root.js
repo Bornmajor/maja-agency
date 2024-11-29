@@ -7,7 +7,7 @@ import AppLoader from '../components/AppLoader'
 
 
 const Root = () => {
-  const {isAppLoading,setIsAppLoading} = useContext(MyContext);
+  const {isAppLoading,setIsAppLoading,setNavBarIsOpen} = useContext(MyContext);
   const location = useLocation();
 
   useEffect(()=>{
@@ -16,7 +16,22 @@ const Root = () => {
        console.log('Route changed:', location.pathname);
        setTimeout(() => {
        setIsAppLoading(false)  
-       }, 800);
+       }, 1000);
+
+          //scroll to given div when url has hash #div
+      setTimeout(() => {
+        if (location.hash) {
+     const elementId = location.hash.substring(1); // Remove the '#' from the hash
+     const element = document.getElementById(elementId);
+
+     if (element) {
+       element.scrollIntoView({ behavior: "smooth" });
+     }
+   }
+     }, 1000);
+
+       //close navbar on change route
+       setNavBarIsOpen(false);
 
   },[location])
   

@@ -6,12 +6,12 @@ import office2 from '../assets/images/pexels-seven11nash-380769.jpg'
 const LocationsSection = () => {
   return (
     <>
-       <div className='company-locations py-4'>
+       <div className='company-locations py-4' id="locations">
 
-<div className='d-flex justify-content-between'>
+<div className='d-flex justify-content-between classic-container'>
  
 <h2 className='classic-header'>
- We are serving in <span className='primary-text'>various counties </span>
+ We are serving in <span className='primary-text'>various countries </span>
 </h2>
 
 <p className='alternative-header' style={{width:'350px'}}>
@@ -21,7 +21,7 @@ Leverage innovative digital techniques to enhance brand awareness and customer e
 </div>
 
 
-<div className='horizontal-scrollable'>
+<div className='horizontal-scrollable' >
 
 
 <PresenterCard 
@@ -43,6 +43,13 @@ Leverage innovative digital techniques to enhance brand awareness and customer e
  imgUrl={office1}
  width="400px"
  height="280px"
+/>
+
+<PresenterCard 
+ title="Rwanda branch"
+ imgUrl={office2}
+ width="400px"
+  height="280px"
 />
 
 

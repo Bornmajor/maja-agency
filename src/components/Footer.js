@@ -1,35 +1,70 @@
-import React from 'react'
+import React, { useContext,useState } from 'react'
 import appLogo from '../assets/images/maja-agency-logo.png'
 import { Link } from 'react-router-dom'
+import MyContext from '../context/context'
 
 
 const Footer = () => {
+  const {successFeedback,contextHolder} = useContext(MyContext);
+  const [email,setEmail] = useState('');
+  const [isSubmit,setIsSubmit] = useState(false);
+
+  const submitForm = (e) =>{
+    e.preventDefault();
+    successFeedback('We have sent you an email');
+    setEmail('');
+    setIsSubmit(true);
+
+    setTimeout(() => {
+      setIsSubmit(false);
+    }, 3000);
+  }
   return (
     <div className='footer'>
-
+      {contextHolder}
       <div className='footer-app-logo-section my-3'>
       <img src={appLogo} alt='App logo' width={80} />
+      <span className='title'>Maja Agency</span>
    
      </div>
 
      
-<h2 className='header'>Got an Awesome Idea? Let's talk</h2>
+<h2 className='header'>Your next big idea starts here. Let's chat.</h2>
 
-<div className='contact-us'>
+<div className='contact-us' id="contact-us">
 
-<form class="d-flex my-3 align-items-center form-setup lg-form-setup">
+<form class="d-flex my-3 align-items-center form-setup lg-form-setup" onSubmit={submitForm}>
   <input type="email" class="form-control input-setup" 
   id="exampleFormControlInput1" 
   placeholder="Your email address"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
   required
   />
-  <a className='btn btn-success submit-btn mx-2'>Get started</a>
+  <button type='submit' className='btn btn-success submit-btn mx-2' >Get started</button>
 </form>
 
-<form class="sm-form-setup input-group ">
-  <input type="text" class="form-control input-setup" placeholder="Email address" 
-  aria-label="Recipient's username" aria-describedby="button-addon2" />
-  <button class="btn btn-success submit-btn" type="button" id="button-addon2">Button</button>
+<form class="sm-form-setup input-group" onSubmit={submitForm}>
+  <input type="email"
+   class="form-control input-setup"
+   placeholder="Email address" 
+  aria-label="Recipient's username" aria-describedby="button-addon2"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  required/>
+  <button type='submit' class="btn btn-success submit-btn" id="button-addon2">
+    {isSubmit ? (
+      <>
+      <i class="fas fa-check"></i> Sent
+      </>
+
+    )
+   
+    :
+    'Submit'
+     }
+    
+    </button>
 </form>
 
 

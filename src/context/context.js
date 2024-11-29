@@ -7,7 +7,6 @@ export const MyContextProvider  = (props) =>{
     const [uiTheme,setUiTheme] = useState('#198754');
     const [textColor,setTextColor] = useState('black');
     const [messageApi, contextHolder] = message.useMessage();
-     const toggleNavbar = () => setNavBarIsOpen(!navBarIsOpen);
     const [navBarIsOpen,setNavBarIsOpen] = useState(false);
     const [isAppLoading,setIsAppLoading] = useState(true)
 
@@ -33,9 +32,7 @@ export const MyContextProvider  = (props) =>{
     };
 
    
-    
-
-
+  const toggleNavbar = () => setNavBarIsOpen(!navBarIsOpen);
 
 
     return(

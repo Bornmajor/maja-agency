@@ -62,10 +62,10 @@ const TopBar = () => {
               
 
               {/* <Nav.Link to="/" id="nav-home-link" className={getNavLinkClass('/')} as={Link}>Home</Nav.Link> */}
-                <Nav.Link to="#" className={getNavLinkClass('/home')} as={Link}>Services</Nav.Link>
-                <Nav.Link to="#" className={getNavLinkClass('/staff')} as={Link}>About</Nav.Link>
-                <Nav.Link to="#" className={getNavLinkClass('/staff')} as={Link}>Projects</Nav.Link>
-                <Nav.Link to="#" className={getNavLinkClass('/staff')} as={Link}>Our Team</Nav.Link>
+                <Nav.Link to="/#services" className={getNavLinkClass('/home')} as={Link}>Services</Nav.Link>
+                <Nav.Link to="/#hero" className={getNavLinkClass('/staff')} as={Link}>About</Nav.Link>
+                <Nav.Link to="/#projects" className={getNavLinkClass('/staff')} as={Link}>Projects</Nav.Link>
+                <Nav.Link to="/#locations" className={getNavLinkClass('/staff')} as={Link}>Our Locations</Nav.Link>
                
           
              
@@ -74,7 +74,7 @@ const TopBar = () => {
 
      
                  
-                <Link to="#" className='btn btn-success btn-nav-talk-us'>Talk to us</Link>
+                <Link to="/#contact-us" className='btn btn-success btn-nav-talk-us'>Talk to us</Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
